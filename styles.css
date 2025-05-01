@@ -1,0 +1,200 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Layout */
+.content-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.main-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.name {
+    color: #ffffff;
+}
+
+.bio {
+    margin-bottom: 3rem;
+}
+
+.bio p {
+    margin-bottom: 1.5rem;
+    color: #b3b3b3;
+    font-size: 1.1rem;
+}
+
+/* Links */
+a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a.highlight {
+    color: #4a9eff;
+}
+
+a:hover {
+    color: #4a9eff;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #4a9eff;
+}
+
+/* Personal Quote */
+.personal-quote {
+    margin: 1.5rem 0 2.5rem 0;
+    padding: 1rem 0;
+    border-left: 3px solid #4a9eff;
+    padding-left: 1rem;
+}
+
+.personal-quote p {
+    font-size: 1.2rem;
+    color: #4a9eff;
+    font-style: italic;
+}
+
+/* Carousel */
+.carousel-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-top: 4rem;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0.9;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+/* Video specific styles */
+video.carousel-image {
+    object-fit: cover;
+    background: #000;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.carousel-button:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-button.prev {
+    left: 8px;
+}
+
+.carousel-button.next {
+    right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .carousel-container {
+        width: 100%;
+        height: 300px;
+        margin-top: 2rem;
+    }
+
+    .main-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .bio p {
+        font-size: 1rem;
+    }
+} 
